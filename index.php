@@ -5,7 +5,6 @@
   </head>
   <body>
     <?php
-<<<<<<< HEAD
 	    $name = "PHP Store";
 			$credit = 1000; 
 
@@ -21,15 +20,13 @@
 		    echo "<p>The ".$key." costs ".$value."</p>";
 	    }
 
-=======
-    $name = "PHP Store";
-    $credit = 1000;
+	    echo "<h2>Items you can afford</h2>";
 
-    // Using two forward slashes we create comments in php.
-    // Within the php tag, we can insert values into our HTML.
-    echo "<h1>Welcome to ".$name."!</h1>";
-    echo "<h2>You have $".$credit." in your wallet.</h2>";
->>>>>>> 79f5119143c869c4b92377028b07a9ab0920f602
+	    foreach($products as $key => $value){
+		    if($value <= $credit ){
+		    	echo "<p>".$key."</p>"; 
+		    }
+	    }
     ?>
   </body>
 </html>
